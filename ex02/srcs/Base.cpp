@@ -6,11 +6,12 @@
 /*   By: miltavar <miltavar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 14:09:13 by miltavar          #+#    #+#             */
-/*   Updated: 2026/01/27 15:10:49 by miltavar         ###   ########.fr       */
+/*   Updated: 2026/03/05 15:25:11 by miltavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/C.hpp"
+#include <ctime>
 
 Base::~Base()
 {
@@ -18,8 +19,11 @@ Base::~Base()
 
 Base	*generate(void)
 {
-	int rnbr = rand() % 3;
+	static int r = 0;
+	srand(time(NULL));
+	int rnbr = rand() % 3 + r;
 
+	r++;
 	if (rnbr == 0)
 		return (new A);
 	else if (rnbr == 1)
