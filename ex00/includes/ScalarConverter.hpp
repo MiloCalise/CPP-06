@@ -6,7 +6,7 @@
 /*   By: miltavar <miltavar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 17:40:50 by miltavar          #+#    #+#             */
-/*   Updated: 2026/01/23 15:35:17 by miltavar         ###   ########.fr       */
+/*   Updated: 2026/03/11 12:17:52 by miltavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@
 
 class ScalarConverter
 {
+private:
+	ScalarConverter();
+	ScalarConverter(const ScalarConverter& copy);
 public:
 	static void	convert(const std::string& literal);
 };
